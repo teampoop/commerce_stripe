@@ -22,8 +22,8 @@ function commerce_stripe_settings_form($settings = NULL) {
   // Merge default settings into the stored settings array.
   $settings = (array) $settings + array(
     'commerce_stripe_env' => 'test',
-    'test' => array('secret' => '','public' => '',),
-    'live' => array('secret' => '', 'public' => '',),
+    'test' => array( 'secret' => '', 'public' => '', ),
+    'live' => array( 'secret' => '', 'public' => '', ),
   );
     
   $output = '<ol>';
@@ -137,11 +137,11 @@ function commerce_stripe_submit_form_validate($payment_method, $pane_form, $pane
     'card' => $pane_values['stripe_token'],
     'description' => 'Order Number: ' . $order->order_number,
   );
-  watchdog('commerce_stripe_submit', 'Testing with <pre>'. print_r($c, TRUE) . '</pre>');
+  
   try{
     $response = Stripe_Charge::create($c);
-    watchdog('commerce_stripe_submit', 'We got this stripe response: <pre>'. print_r($response, TRUE).'</pre>');
-    if(!$response->paid) {
+    
+    if (!$response->paid) {
       drupal_set_message(t('We received the following error processing your card. Please enter you information again or try a different card.'), 'error');
       drupal_set_message(check_plain($response->card), 'error');
       watchdog('commerce_stripe', 'Following error received when processing card @stripe_error.', array('@stripe_error' => check_plain($response->card)), WATCHDOG_NOTICE);
