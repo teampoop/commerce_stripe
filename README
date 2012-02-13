@@ -1,5 +1,8 @@
 Stripe (https://stripe.com/) Payment Gateway integration with Drupal Commerce.
 
+** Taken from DrupalCommerce.org **
+Drupal Commerce is a lean and mean open source e-commerce framework built on Drupal 7. Use it to build flexible and highly customizable websites based on the best platform for social commerce.
+
 ** Taken from the Stripe website **
 You don't need a merchant account or gateway. Stripe handles everything, including storing cards, subscriptions, and direct payouts to your bank account. To make it all happen, we work closely with some of the best financial institutions in the world.
 
