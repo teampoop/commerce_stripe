@@ -1,8 +1,0 @@
-name = Commerce Stripe
-description = Integrating Drupal Commerce with the Stripe payment Gateway. https://stripe.com/
-package = Commerce Payments
-version = VERSION
-core = 7.x
-files[] = commerce_stripe.module
-files[] = commerce_stripe.admin.inc
-configure = admin/config/stripe/admin/keys
